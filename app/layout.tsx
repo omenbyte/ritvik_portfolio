@@ -28,14 +28,19 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const GA_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID
   return (
     <html lang="en" suppressHydrationWarning className="dark">
       <head>
+        {/*Default: Dark Mode*/}
+        <Script id="set-dark-mode" strategy="beforeInteractive">
+          {`
+            document.documentElement.classList.add('dark');
+          `}
+        </Script>
         {/* Google Analytics */}
         <Script
           strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          src={`https://www.googletagmanager.com/gtag/js?id=G-9DSTW7FHDZ`}
         />
         <Script
           id="gtag-init"
@@ -45,7 +50,7 @@ export default function RootLayout({
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', '${GA_ID}');
+              gtag('config', 'G-9DSTW7FHDZ');
             `,
           }}
         />
