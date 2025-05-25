@@ -13,7 +13,7 @@ export function Footer() {
               {PERSONAL_INFO.name}
             </h3>
             <p className="text-gray-600 dark:text-gray-300">
-              Full-stack developer passionate about creating secured digital experiences.
+              Cybersecurity Specialist and Full-stack developer creating secured digital experiences.
             </p>
           </div>
           <div>

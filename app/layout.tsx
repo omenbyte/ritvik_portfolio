@@ -8,7 +8,18 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Ritvik Sharma",
-  description: "Cybersecurity specialist and full-stack developer with a strong academic foundation and industry experience in secure systems design, cloud infrastructure, and software development.",
+  description: "Cybersecurity specialist and a full-stack web developer with a strong hands-on experience in secure system design, cloud infrastructure, cybersecurity and software development.",
+  keywords: [
+    "Ritvik Sharma",
+    "web developer",
+    "full-stack developer",
+    "portfolio",
+    "Next.js developer",
+    "frontend engineer",
+    "cloud engineer",
+    "penetration testing",
+    "freelance web developer"
+  ],
 }
 
 export default function RootLayout({

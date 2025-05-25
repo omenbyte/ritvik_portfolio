@@ -6,6 +6,7 @@ import { Moon, Sun, Menu, X } from "lucide-react"
 import { useTheme } from "next-themes"
 import { useScrollEffect } from "@/hooks/useScrollEffect"
 import { PERSONAL_INFO, NAVIGATION_ITEMS } from "@/constants/data"
+import Link from 'next/link'
 
 export function Header() {
   const { theme, setTheme } = useTheme()
@@ -22,11 +23,13 @@ export function Header() {
         }`}
       >
         {/* Logo */}
-        <div className="flex items-center">
-          <span className="text-purple-600/100 text-xl font-bold bg-clip-text text-transparent">
-            {PERSONAL_INFO.name}
-          </span>
-        </div>
+        <Link href="#">
+          <div className="flex items-center">
+            <span className="text-purple-600/100 text-xl font-bold bg-clip-text dark:text-purple-600/100">
+              {PERSONAL_INFO.name}
+            </span>
+          </div>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center justify-center flex-1">
@@ -53,7 +56,7 @@ export function Header() {
           variant="ghost"
           size="icon"
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-          className="ml-auto md:ml-0 bg-white/10 dark:bg-black/10 backdrop-blur-md rounded-full border-2 border-sky-700/40 dark:border-white/10"
+          className="ml-auto md:ml-0 bg-white/10 dark:bg-black/10 backdrop-blur-md rounded-full border-2 border-blue-800/50 dark:border-purple-800/50 dark:border-2"
         >
           {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
         </Button>
