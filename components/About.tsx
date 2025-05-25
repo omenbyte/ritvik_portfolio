@@ -1,9 +1,9 @@
 import { PERSONAL_INFO } from "@/constants/data"
 import Image from 'next/image';
-import Ritvik_Image from "@/public/ritvik_sharma.png";
+import ritvik from "@/public/ritvik.png";
 
 export function AboutSection() {
-  
+  const Ritvik_Image = ritvik;
   return (
     <section id="about" className="relative z-10 px-4 lg:px-6 py-12 lg:py-24">
       <div className="container mx-auto max-w-6xl">
@@ -14,7 +14,7 @@ export function AboutSection() {
                 About Me
               </h2>
               <h3 className="text-3xl lg:text-5xl font-bold text-gray-900 dark:text-white">
-                Crafting Digital Experiences with Passion
+                Crafting Secured Experiences with Passion
               </h3>
             </div>
             {PERSONAL_INFO.bio.map((paragraph, index) => (

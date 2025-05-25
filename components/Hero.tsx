@@ -18,17 +18,17 @@ export function HeroSection() {
   }, [])
 
   return (
-    <section className="relative z-10 px-4 lg:px-6 py-12 lg:py-24 mt-16">
+    <section id="home" className="relative z-10 px-4 lg:px-6 py-12 lg:py-24 mt-16">
       <div className="container mx-auto max-w-6xl">
         <div className="flex flex-col items-center text-center space-y-8">
           {/* Safari Browser Mockup */}
           <div className="w-full max-w-4xl mx-auto">
-            <div className="bg-white/20 dark:bg-black/20 border border-gray-800/20 backdrop-blur-md rounded-t-xl border border-white/30 dark:border-white/10 p-3">
+            <div className="bg-white/20 dark:bg-black/20 border border-gray-800/20 backdrop-blur-md rounded-t-xl dark:border-white/10 p-3">
               <div className="flex items-center space-x-2 mb-3">
                 <div className="w-3 h-3 bg-red-500 rounded-full" />
                 <div className="w-3 h-3 bg-yellow-500 rounded-full" />
                 <div className="w-3 h-3 bg-green-500 rounded-full" />
-                <div className="flex-1 bg-white/20 border bg-gray-600/5 border-gray-800/20 dark:bg-gray-600/20 border border-white/10 rounded-md px-3 py-1 mx-4">
+                <div className="flex-1 border bg-gray-600/5 border-gray-800/20 dark:bg-gray-600/20 rounded-md px-3 py-1 mx-4">
                   <span className="text-xs text-gray-600 dark:text-gray-400">https://{PERSONAL_INFO.domain}</span>
                 </div>
               </div>
@@ -53,10 +53,7 @@ export function HeroSection() {
                     {isTyping && <span className="animate-pulse">|</span>}
                   </h1>
                   <div className="h-8 lg:h-12 flex items-start relative overflow-hidden">
-                    <p
-                      key={currentRole}
-                      className="text-xl lg:text-3xl font-medium text-gray-700 dark:text-gray-300 animate-fade-in-down"
-                    >
+                    <p key={PERSONAL_INFO.roles[currentRole]} className="text-xl lg:text-3xl font-medium text-gray-700 dark:text-gray-300 animate-fade-in-down">
                       {PERSONAL_INFO.roles[currentRole]}
                     </p>
                   </div>
@@ -67,7 +64,7 @@ export function HeroSection() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link href="/projects">
+            <Link href="#projects">
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
@@ -75,7 +72,7 @@ export function HeroSection() {
                 View My Work
               </Button>
             </Link>
-            <Link href="/contact">
+            <Link href="#contact">
               <Button
                 size="lg"
                 variant="outline"

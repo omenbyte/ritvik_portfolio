@@ -1,5 +1,5 @@
 import { Globe, Smartphone, Palette, Cloud, Server, Users } from "lucide-react"
-import { FaLinkedin, FaGithub, FaPython, FaJava, FaJs, FaReact, FaNodeJs, FaDatabase, FaAws, FaGoogle, FaGitAlt, FaLinux, FaNetworkWired, FaLock, FaShieldAlt, FaSearch, FaSkull, FaFish, FaCodeBranch, FaCogs, FaPlug, FaCube, FaCuttlefish, FaBook, FaMobileAlt, FaUserSecret } from "react-icons/fa"
+import { FaLinkedin, FaGithub, FaPython, FaJava, FaJs, FaReact, FaNodeJs, FaDatabase, FaAws, FaGoogle, FaGitAlt, FaLinux, FaNetworkWired, FaLock, FaShieldAlt, FaSearch, FaSkull, FaFish, FaCodeBranch, FaCogs, FaPlug, FaCube, FaCuttlefish, FaBook, FaMobileAlt, FaUserSecret, FaCalculator } from "react-icons/fa"
 import type { Project, Service, SkillCategory, ContactInfo, SocialLink } from "@/types"
 
 export const PERSONAL_INFO = {
@@ -11,8 +11,9 @@ export const PERSONAL_INFO = {
   tagline: "Full Stack Developer & Cybersecurity Specialist",
   roles: ["Full Stack Developer", "Ethical Hacker", "Cloud Engineer", "Problem Solver"],
   bio: [
-    "Cybersecurity-focused full-stack developer with a strong academic foundation and industry experience in secure systems design, cloud infrastructure, and software development.",
-    "Skilled in designing and deploying secure, scalable applications with a passion for innovation, performance, and clean architecture."
+    "Cybersecurity specialist and full-stack developer with a strong academic foundation and industry experience in secure systems design, cloud infrastructure, and software development.",
+    "Skilled in designing and deploying secure, scalable applications with a passion for innovation, performance, and clean architecture.",
+    "Outside of coding, I enjoy exploring new places, following football, and diving into a good book. Always open to a great conversation!"
   ],
 }
 
@@ -22,7 +23,7 @@ export const PROJECTS: Project[] = [
     description:
       "AI-powered interviewer platform using OpenAI API, Whisper, and secure AWS services for real-time, HIPAA-compliant interactions.",
     demoUrl: null,
-    githubUrl: "",
+    githubUrl: "#",
     isLive: false,
     tech: ["Next.js", "OpenAI API", "AWS", "Whisper", "Lambda", "EC2", "S3"],
   },
@@ -31,7 +32,7 @@ export const PROJECTS: Project[] = [
     description:
       "Blockchain-based identity system using federated learning and behavioral analytics to enable scalable, adaptive cloud security.",
     demoUrl: null,
-    githubUrl: "",
+    githubUrl: "#",
     isLive: false,
     tech: ["Blockchain", "Federated Learning", "Identity Management", "Go"],
   },
@@ -40,7 +41,7 @@ export const PROJECTS: Project[] = [
     description:
       "Designed governance framework for SPYONU, delivering risk analysis, metrics, and compliance dashboards.",
     demoUrl: null,
-    githubUrl: "",
+    githubUrl: "#",
     isLive: false,
     tech: ["System Architecture", "Compliance", "Risk Assessment"],
   },
@@ -129,6 +130,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
   {
     title: "Other Tools",
     skills: [
+      { name: "Data Structures & Algorithms", icon: FaCalculator},
       { name: "Git", icon: FaGitAlt },
       { name: "CI/CD", icon: FaCodeBranch },
       { name: "Blockchain", icon: FaCube },

@@ -23,7 +23,7 @@ export function Header() {
       >
         {/* Logo */}
         <div className="flex items-center">
-          <span className="text-xl font-bold text-purple-600 bg-clip-text text-transparent">
+          <span className="text-purple-600/100 text-xl font-bold bg-clip-text text-transparent">
             {PERSONAL_INFO.name}
           </span>
         </div>
