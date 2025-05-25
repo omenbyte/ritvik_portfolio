@@ -29,13 +29,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning className="dark">
+    <html lang="en" suppressHydrationWarning>
          <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange={false}>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange={false}>
           {children}
         </ThemeProvider>
       </body>
-      <GoogleAnalytics gaId="G-9DSTW7FHDZ" />
+      <GoogleAnalytics gaId="G-HN119R5SJ4" />
     </html>
   )
 }
