@@ -104,9 +104,9 @@ export function ContactSection() {
           <h2 className="text-sm font-medium text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-2">
             Get In Touch
           </h2>
-          <h3 className="text-3xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">Let's Work Together</h3>
+          <h3 className="text-3xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">Let&apos;s Work Together</h3>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Have a project in mind or just a chat? Send me a message and let's discuss!
+            Have a project in mind or want to chat? Send me a message and let&apos;s discuss!
           </p>
         </div>
 
@@ -115,7 +115,7 @@ export function ContactSection() {
             <CardHeader>
               <CardTitle className="text-gray-900 dark:text-white">Send Message</CardTitle>
               <CardDescription className="text-gray-600 dark:text-gray-300">
-                Fill out the form below and I'll get back to you as soon as possible.
+                Fill out the form below and I&apos;ll get back to you as soon as possible.
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -124,7 +124,7 @@ export function ContactSection() {
                   <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Message Sent!</h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Thank you for your message. I'll get back to you soon.
+                    Thank you for your message. I&apos;ll get back to you soon.
                   </p>
                 </div>
               ) : (

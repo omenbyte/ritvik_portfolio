@@ -1,6 +1,7 @@
 "use client"
 
 import type React from "react"
+import { Suspense } from "react";
 import { AnimatedBlobs } from "@/components/layout/AnimatedBlobs"
 import { SectionDivider } from "@/components/layout/SectionDivider"
 import { Header } from "@/components/layout/Header"
@@ -25,7 +26,9 @@ export default function Portfolio() {
         <ProjectsSection />
         <SkillsSection />
         <ServicesSection />
-        <ContactSection />
+        <Suspense fallback={<div>Loading contact form...</div>}>
+          <ContactSection />
+        </Suspense>
       </main>
       <Footer />
     </div>
