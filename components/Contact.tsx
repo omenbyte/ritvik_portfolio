@@ -144,20 +144,6 @@ export function ContactSection() {
               <CardContent className="p-6">
                 <div className="flex items-center space-x-4">
                   <div className="p-3 bg-blue-100 dark:bg-blue-900/30 rounded-lg">
-                    <Phone className="w-6 h-6 text-blue-600 dark:text-blue-400" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white">Phone</h3>
-                    <p className="text-gray-600 dark:text-gray-300">{CONTACT_INFO.phone}</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white/10 dark:bg-black/10 backdrop-blur-md border-white/20 dark:border-white/10">
-              <CardContent className="p-6">
-                <div className="flex items-center space-x-4">
-                  <div className="p-3 bg-blue-100 dark:bg-blue-900/30 rounded-lg">
                     <MapPin className="w-6 h-6 text-blue-600 dark:text-blue-400" />
                   </div>
                   <div>
@@ -169,17 +155,20 @@ export function ContactSection() {
             </Card>
 
             <div className="flex space-x-4">
-              {SOCIAL_LINKS.map((social) => (
-                <Button
-                  key={social.name}
-                  variant="outline"
-                  size="icon"
-                  className="bg-white/10 dark:bg-black/10 backdrop-blur-md border-white/20 dark:border-white/10"
-                  onClick={() => window.open(social.url, "_blank")}
-                >
-                  {social.icon}
-                </Button>
-              ))}
+              {SOCIAL_LINKS.map((social) => {
+                const Icon = social.icon
+                return (
+                  <Button
+                    key={social.name}
+                    variant="outline"
+                    size="icon"
+                    className="p-2 bg-white/10 dark:bg-black/10 backdrop-blur-md border-white/20 dark:border-white/10"
+                    onClick={() => window.open(social.url, "_blank")}
+                  >
+                    <Icon className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+                  </Button>
+                )
+              })}
             </div>
           </div>
         </div>

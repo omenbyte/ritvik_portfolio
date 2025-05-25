@@ -45,14 +45,13 @@ export function Footer() {
             <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Contact</h4>
             <ul className="space-y-2">
               <li className="text-gray-600 dark:text-gray-300">{CONTACT_INFO.email}</li>
-              <li className="text-gray-600 dark:text-gray-300">{CONTACT_INFO.phone}</li>
               <li className="text-gray-600 dark:text-gray-300">{CONTACT_INFO.location}</li>
             </ul>
           </div>
         </div>
         <div className="border-t border-white/20 dark:border-white/10 mt-8 pt-8 text-center">
           <p className="text-gray-600 dark:text-gray-300">
-            © 2024 {PERSONAL_INFO.name}. All rights reserved. Built with Next.js and Tailwind CSS.
+            © {new Date().getFullYear()} {PERSONAL_INFO.name}. All rights reserved.
           </p>
         </div>
       </div>

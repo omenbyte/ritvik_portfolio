@@ -17,20 +17,20 @@ export function Header() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 px-4 lg:px-6 h-16 flex items-center justify-between transition-all duration-300 ${
           isScrolled
-            ? "bg-white/10 dark:bg-black/10 backdrop-blur-md border-b border-white/20 dark:border-white/10"
+            ? "bg-white/20 dark:bg-black/40 backdrop-blur-md"
             : "bg-transparent"
         }`}
       >
         {/* Logo */}
         <div className="flex items-center">
-          <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <span className="text-xl font-bold text-purple-600 bg-clip-text text-transparent">
             {PERSONAL_INFO.name}
           </span>
         </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center justify-center flex-1">
-          <div className="flex items-center space-x-8 bg-white/10 dark:bg-black/10 backdrop-blur-md rounded-full px-8 py-3 border border-white/20 dark:border-white/10">
+          <div className="flex items-center space-x-8 bg-black/5 dark:bg-black/10 backdrop-blur-md rounded-full px-8 py-3 ">
             {NAVIGATION_ITEMS.map((item) => (
               <a
                 key={item}
@@ -53,7 +53,7 @@ export function Header() {
           variant="ghost"
           size="icon"
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-          className="ml-auto md:ml-0 bg-white/10 dark:bg-black/10 backdrop-blur-md border border-white/20 dark:border-white/10"
+          className="ml-auto md:ml-0 bg-white/10 dark:bg-black/10 backdrop-blur-md rounded-full border-2 border-sky-700/40 dark:border-white/10"
         >
           {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
         </Button>

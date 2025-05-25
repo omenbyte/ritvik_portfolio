@@ -1,4 +1,5 @@
 import type React from "react"
+import { IconType } from "react-icons"
 export interface Project {
   name: string
   description: string
@@ -11,14 +12,14 @@ export interface Project {
 export interface Service {
   title: string
   description: string
-  icon: React.ReactNode
+  icon: IconType
   features: string[]
   price: string
 }
 
 export interface Skill {
   name: string
-  icon: string
+  icon: IconType
 }
 
 export interface SkillCategory {
@@ -35,12 +36,11 @@ export interface ContactFormData {
 
 export interface ContactInfo {
   email: string
-  phone: string
   location: string
 }
 
 export interface SocialLink {
   name: string
   url: string
-  icon: React.ReactNode
+  icon: IconType
 }

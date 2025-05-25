@@ -1,47 +1,57 @@
-import { Globe, Smartphone, Palette, Cloud, Server, Users, Linkedin, Twitter, Github } from "lucide-react"
+import { Globe, Smartphone, Palette, Cloud, Server, Users } from "lucide-react"
+import { FaLinkedin, FaGithub, FaPython, FaJava, FaJs, FaReact, FaNodeJs, FaDatabase, FaAws, FaGoogle, FaGitAlt, FaLinux, FaNetworkWired, FaLock, FaShieldAlt, FaSearch, FaSkull, FaFish, FaCodeBranch, FaCogs, FaPlug, FaCube, FaCuttlefish, FaBook, FaMobileAlt, FaUserSecret } from "react-icons/fa"
 import type { Project, Service, SkillCategory, ContactInfo, SocialLink } from "@/types"
 
 export const PERSONAL_INFO = {
-  name: "John Doe",
-  domain: "johndoe.dev",
-  email: "john@johndoe.dev",
-  phone: "+1 (555) 123-4567",
-  location: "San Francisco, CA",
-  tagline: "hi, i'm Ritvik Sharma",
-  roles: ["Full Stack Developer", "UI/UX Designer", "Frontend Engineer", "Creative Developer", "Problem Solver"],
+  name: "Ritvik Sharma",
+  domain: "ritviksharma.dev",
+  email: "ritviksharma.dev@gmail.com",
+  phone: null,
+  location: "Manchester, United Kingdom",
+  tagline: "Full Stack Developer & Cybersecurity Specialist",
+  roles: ["Full Stack Developer", "Ethical Hacker", "Cloud Engineer", "Problem Solver"],
   bio: [
-    "I'm a passionate full-stack developer with over 5 years of experience creating beautiful, functional, and user-centered digital experiences. I specialize in modern web technologies and love bringing ideas to life through code.",
-    "When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing my knowledge with the developer community.",
+    "Cybersecurity-focused full-stack developer with a strong academic foundation and industry experience in secure systems design, cloud infrastructure, and software development.",
+    "Skilled in designing and deploying secure, scalable applications with a passion for innovation, performance, and clean architecture."
   ],
 }
 
 export const PROJECTS: Project[] = [
   {
-    name: "E-Commerce Platform",
+    name: "Discern – AI Interviewer",
     description:
-      "A full-stack e-commerce solution built with Next.js, featuring real-time inventory management, payment processing, and admin dashboard.",
-    demoUrl: "https://demo.example.com",
-    githubUrl: "https://github.com/johndoe/ecommerce",
-    isLive: true,
-    tech: ["Next.js", "TypeScript", "Stripe", "PostgreSQL"],
-  },
-  {
-    name: "Task Management App",
-    description:
-      "Collaborative task management application with real-time updates, team collaboration features, and advanced analytics.",
+      "AI-powered interviewer platform using OpenAI API, Whisper, and secure AWS services for real-time, HIPAA-compliant interactions.",
     demoUrl: null,
-    githubUrl: "https://github.com/johndoe/taskmanager",
+    githubUrl: "",
     isLive: false,
-    tech: ["React", "Node.js", "Socket.io", "MongoDB"],
+    tech: ["Next.js", "OpenAI API", "AWS", "Whisper", "Lambda", "EC2", "S3"],
   },
   {
-    name: "AI Content Generator",
+    name: "Decentralised Security Framework",
     description:
-      "AI-powered content generation tool that helps create blog posts, social media content, and marketing copy using OpenAI's GPT models.",
-    demoUrl: "https://ai-content.example.com",
-    githubUrl: "https://github.com/johndoe/ai-content",
-    isLive: true,
-    tech: ["Next.js", "OpenAI API", "Tailwind CSS", "Vercel"],
+      "Blockchain-based identity system using federated learning and behavioral analytics to enable scalable, adaptive cloud security.",
+    demoUrl: null,
+    githubUrl: "",
+    isLive: false,
+    tech: ["Blockchain", "Federated Learning", "Identity Management", "Go"],
+  },
+  {
+    name: "Diamond System – Systems Governance",
+    description:
+      "Designed governance framework for SPYONU, delivering risk analysis, metrics, and compliance dashboards.",
+    demoUrl: null,
+    githubUrl: "",
+    isLive: false,
+    tech: ["System Architecture", "Compliance", "Risk Assessment"],
+  },
+  {
+    name: "OneInvo",
+    description:
+      "Mobile app to digitise the concept of paper receipts over Point of Sale (POS).",
+    demoUrl: null,
+    githubUrl: "",
+    isLive: false,
+    tech: ["React Native", "AWS", "Python"],
   },
 ]
 
@@ -50,115 +60,98 @@ export const SERVICES: Service[] = [
     title: "Web Development",
     description:
       "Custom websites and web applications built with modern technologies like React, Next.js, and Node.js.",
-    icon: <Globe className="w-8 h-8" />,
+    icon: Globe,
     features: ["Responsive Design", "SEO Optimization", "Performance Optimization", "Modern Frameworks"],
-    price: "Starting at $2,500",
+    price: "Contact for Pricing",
   },
   {
     title: "Mobile App Development",
-    description: "Cross-platform mobile applications using React Native and Flutter for iOS and Android.",
-    icon: <Smartphone className="w-8 h-8" />,
+    description: "Cross-platform mobile applications using React Native for iOS and Android.",
+    icon: Smartphone,
     features: ["Cross-Platform", "Native Performance", "App Store Deployment", "Push Notifications"],
-    price: "Starting at $5,000",
-  },
-  {
-    title: "UI/UX Design",
-    description: "User-centered design solutions that create engaging and intuitive digital experiences.",
-    icon: <Palette className="w-8 h-8" />,
-    features: ["User Research", "Wireframing", "Prototyping", "Design Systems"],
-    price: "Starting at $1,500",
+    price: "Contact for Pricing",
   },
   {
     title: "Cloud Solutions",
     description: "Scalable cloud infrastructure setup and deployment using AWS, Google Cloud, and Azure.",
-    icon: <Cloud className="w-8 h-8" />,
+    icon: Cloud,
     features: ["Infrastructure Setup", "CI/CD Pipelines", "Monitoring", "Security"],
-    price: "Starting at $3,000",
+    price: "Contact for Pricing",
   },
   {
-    title: "API Development",
-    description: "RESTful and GraphQL APIs with proper documentation, authentication, and rate limiting.",
-    icon: <Server className="w-8 h-8" />,
-    features: ["REST & GraphQL", "Authentication", "Documentation", "Testing"],
-    price: "Starting at $2,000",
-  },
-  {
-    title: "Consulting",
-    description: "Technical consulting and code reviews to help optimize your existing projects and workflows.",
-    icon: <Users className="w-8 h-8" />,
-    features: ["Code Review", "Architecture Planning", "Performance Audit", "Team Training"],
-    price: "Starting at $150/hour",
+    title: "VAPT Report",
+    description: "In-depth and rigorous vulnerability assessment and penetration testing with suggestion to patch code.",
+    icon: Users,
+    features: ["Vulnerability Testing", "Compliance", "Penetration Testing", "Quick Fixes"],
+    price: "Contact for Pricing",
   },
 ]
 
 export const SKILL_CATEGORIES: SkillCategory[] = [
   {
-    title: "Frontend Development",
+    title: "Programming Languages & Frameworks",
     skills: [
-      { name: "React", icon: "⚛️" },
-      { name: "Next.js", icon: "▲" },
-      { name: "Vue.js", icon: "💚" },
-      { name: "TypeScript", icon: "🔷" },
-      { name: "JavaScript", icon: "🟨" },
-      { name: "Tailwind CSS", icon: "🎨" },
-    ],
-  },
-  {
-    title: "Backend Development",
-    skills: [
-      { name: "Node.js", icon: "🟢" },
-      { name: "Python", icon: "🐍" },
-      { name: "Express.js", icon: "🚀" },
-      { name: "FastAPI", icon: "⚡" },
-      { name: "GraphQL", icon: "🔗" },
-      { name: "REST APIs", icon: "🌐" },
+      { name: "Python", icon: FaPython },
+      { name: "C++", icon: FaCuttlefish },
+      { name: "JavaScript", icon: FaJs },
+      { name: "Go", icon: FaFish },
+      { name: "React.js", icon: FaReact },
+      { name: "Node.js", icon: FaNodeJs },
+      { name: "Next.js", icon: FaReact },
+      { name: "React Native", icon: FaMobileAlt }
     ],
   },
   {
     title: "Database & Cloud",
     skills: [
-      { name: "PostgreSQL", icon: "🐘" },
-      { name: "MongoDB", icon: "🍃" },
-      { name: "Redis", icon: "🔴" },
-      { name: "AWS", icon: "☁️" },
-      { name: "Docker", icon: "🐳" },
-      { name: "Kubernetes", icon: "⚙️" },
+      { name: "MongoDB", icon: FaDatabase },
+      { name: "PostgreSQL", icon: FaDatabase },
+      { name: "MySQL", icon: FaDatabase },
+      { name: "AWS", icon: FaAws },
+      { name: "GCP", icon: FaGoogle }
     ],
   },
   {
-    title: "Tools & Design",
+    title: "Security Tools & Techniques",
     skills: [
-      { name: "Figma", icon: "🎨" },
-      { name: "Git", icon: "📝" },
-      { name: "VS Code", icon: "💻" },
-      { name: "Postman", icon: "📮" },
-      { name: "Vercel", icon: "▲" },
-      { name: "Netlify", icon: "🌐" },
+      { name: "Kali Linux", icon: FaLinux },
+      { name: "Pentest", icon: FaShieldAlt },
+      { name: "Ethical Hacking", icon: FaUserSecret },
+      { name: "Cryptography", icon: FaLock },
+      { name: "Burp Suite", icon: FaSearch },
+      { name: "Nmap", icon: FaNetworkWired },
+      { name: "Metasploit", icon: FaSkull },
+      { name: "Wireshark", icon: FaFish },
+      { name: "ISO 27001", icon: FaBook },
+      { name: "Network Security", icon: FaCogs }
+    ],
+  },
+  {
+    title: "Other Tools",
+    skills: [
+      { name: "Git", icon: FaGitAlt },
+      { name: "CI/CD", icon: FaCodeBranch },
+      { name: "Blockchain", icon: FaCube },
+      { name: "API", icon: FaPlug }
     ],
   },
 ]
 
 export const CONTACT_INFO: ContactInfo = {
   email: PERSONAL_INFO.email,
-  phone: PERSONAL_INFO.phone,
   location: PERSONAL_INFO.location,
 }
 
 export const SOCIAL_LINKS: SocialLink[] = [
   {
     name: "LinkedIn",
-    url: "https://linkedin.com/in/johndoe",
-    icon: <Linkedin className="w-5 h-5" />,
-  },
-  {
-    name: "Twitter",
-    url: "https://twitter.com/johndoe",
-    icon: <Twitter className="w-5 h-5" />,
+    url: "https://www.linkedin.com/in/ritvikdevelops/",
+    icon: FaLinkedin,
   },
   {
     name: "GitHub",
-    url: "https://github.com/johndoe",
-    icon: <Github className="w-5 h-5" />,
+    url: "https://github.com/omenbyte/",
+    icon: FaGithub,
   },
 ]
 
