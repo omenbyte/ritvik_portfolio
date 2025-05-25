@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/ThemeProvider"
-import Script from "next/script"
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -30,36 +30,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning className="dark">
-      <head>
-        {/*Default: Dark Mode*/}
-        <Script id="set-dark-mode" strategy="beforeInteractive">
-          {`
-            document.documentElement.classList.add('dark');
-          `}
-        </Script>
-        {/* Google Analytics */}
-        <Script
-          strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtag/js?id=G-9DSTW7FHDZ`}
-        />
-        <Script
-          id="gtag-init"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-9DSTW7FHDZ');
-            `,
-          }}
-        />
-      </head>
-      <body className={inter.className}>
+         <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange={false}>
           {children}
         </ThemeProvider>
       </body>
+      <GoogleAnalytics gaId="G-9DSTW7FHDZ" />
     </html>
   )
 }
