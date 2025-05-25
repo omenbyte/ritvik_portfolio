@@ -43,17 +43,20 @@ export function HeroSection() {
                 </div>                
               </div>
 
-              <div className="bg-white/40 dark:bg-black/10 backdrop-blur-sm rounded-lg p-10 lg:p-20 relative overflow-hidden border border-black/10 dark:border-white/10">
-                <div className="relative z-10 text-left">
-                  <h1 className="text-3xl lg:text-6xl font-bold mb-4 text-purple-700 dark:text-purple-600">
-                    <span className="text-3xl lg:text-6xl font-bold mb-4 text-green-700 dark:text-green-700">
-                    $&nbsp;
+              <div className="bg-white/40 dark:bg-black/10 backdrop-blur-sm rounded-lg p-6 md:p-10 lg:p-16 xl:p-20 relative overflow-hidden border border-black/10 dark:border-white/10">
+                <div className="relative z-10 text-left space-y-4 overflow-hidden">
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-purple-700 dark:text-purple-600 whitespace-nowrap overflow-hidden text-ellipsis">
+                    <span className="text-green-700 dark:text-green-700 mr-2">
+                      $&nbsp;
                     </span>
                     {displayedText}
                     {isTyping && <span className="animate-pulse">|</span>}
                   </h1>
-                  <div className="h-8 lg:h-12 flex items-start relative overflow-hidden">
-                    <p key={PERSONAL_INFO.roles[currentRole]} className="text-xl lg:text-3xl font-medium text-gray-700 dark:text-gray-300 animate-fade-in-down">
+                  <div className="h-auto flex items-start relative overflow-hidden">
+                    <p
+                      key={PERSONAL_INFO.roles[currentRole]}
+                      className="text-base sm:text-xl md:text-2xl lg:text-3xl font-medium text-gray-700 dark:text-gray-300 whitespace-nowrap overflow-hidden text-ellipsis animate-fade-in-down"
+                    >
                       {PERSONAL_INFO.roles[currentRole]}
                     </p>
                   </div>

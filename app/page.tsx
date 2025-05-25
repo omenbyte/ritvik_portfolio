@@ -11,10 +11,10 @@ import { AboutSection } from "@/components/About"
 import { ProjectsSection } from "@/components/Projects"
 import { SkillsSection } from "@/components/Skills"
 import { ServicesSection } from "@/components/Services"
-import { ContactSection } from "@/components/Contact"
+import { ContactSection } from "@/components/Contact";
 
 export default function Portfolio() {
-
+  
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
       <AnimatedBlobs />
